@@ -103,7 +103,7 @@ WSL や WSL2 のインストールが意外と簡単で驚きました。Windows
 
 Linux の基礎的なコマンドを練習してみたい方はこちらの記事も参考にしてみてください。
 
-[CLI の導入と Linux コマンドの練習](https://ts-blog-mu.vercel.app/posts/CLI/introduction-command-line-interface)
+[CLI の導入と Linux コマンドの練習](https://sakait-blog.web.app/posts/CLI/introduction-command-line-interface)
 
 ## 参考
 
