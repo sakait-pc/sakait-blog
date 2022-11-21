@@ -146,3 +146,13 @@ rm -r *フォルダ名*
 今回はCLIとLinuxコマンドについて簡単に紹介しました。Macであればターミナル、WindowsであればGitBashを使うとLinuxコマンドが使えます。基礎的な操作として、pwd, ls, cd, mkdir, touch, rmなどがあります。
 
 他にどんなコマンドやオプションがあるか、「linux コマンド 基本」「linux コマンド rm オプション」などで調べてみましょう。
+
+### その他の記事
+
+- [Windows10にWSLやWSL2をインストールする方法](https://sakait-blog.web.app/posts/WSL/how-to-install-wsl/)
+
+- [初心者向けにNode.jsとは何か説明してみる](https://sakait-blog.web.app/posts/NodeJS/introduction-nodejs/)
+
+- [Notionのデスクトップアプリが開かないときの対処法](https://sakait-blog.web.app/posts/Notion/trouble-shooting-notion-desktop-redirect/)
+
+- [MacでNotionのデスクトップアプリが開かないときの対処法](https://sakait-blog.web.app/posts/Notion/mac-troubleshooting-notion-desktop-redirect/)
