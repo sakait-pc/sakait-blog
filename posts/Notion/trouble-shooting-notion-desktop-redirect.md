@@ -7,6 +7,8 @@ date: "2022-06-01"
 
 結論から言うと、Notionのデスクトップアプリを一旦終了し、`C:\Users\<USERNAME>\AppData\Roaming` 内にある`Notion`フォルダを削除すればOKです。
 
+Macの方は [MacでNotionのデスクトップアプリが開かないときの対処法](https://sakait-blog.web.app/posts/Notion/mac-troubleshooting-notion-desktop-redirect/) をご参照ください。
+
 ## 環境
 
 - Windows 10 Pro 21H1(OSビルド:19043.1706)
@@ -54,3 +56,11 @@ rd /s %userprofile%\AppData\Roaming\Notion
 ## 参考
 
 [Reset Notion](https://www.notion.so/help/reset-notion)
+
+### その他の記事
+
+- [Windows10にWSLやWSL2をインストールする方法](https://sakait-blog.web.app/posts/WSL/how-to-install-wsl/)
+
+- [初心者向けにNode.jsとは何か説明してみる](https://sakait-blog.web.app/posts/NodeJS/introduction-nodejs/)
+
+- [CLIの導入とLinuxコマンドの練習](https://sakait-blog.web.app/posts/CLI/introduction-command-line-interface/)
