@@ -64,3 +64,5 @@ rd /s %userprofile%\AppData\Roaming\Notion
 - [初心者向けにNode.jsとは何か説明してみる](https://sakait-blog.web.app/posts/NodeJS/introduction-nodejs/)
 
 - [CLIの導入とLinuxコマンドの練習](https://sakait-blog.web.app/posts/CLI/introduction-command-line-interface/)
+
+- [NFC Port Softwareのインストールが環境変数の設定で失敗する場合の対処法](https://sakait-blog.web.app/posts/etc/troubleshooting-install-nfc-port-software/)
