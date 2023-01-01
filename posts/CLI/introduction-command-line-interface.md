@@ -156,3 +156,5 @@ rm -r *フォルダ名*
 - [Notionのデスクトップアプリが開かないときの対処法](https://sakait-blog.web.app/posts/Notion/trouble-shooting-notion-desktop-redirect/)
 
 - [MacでNotionのデスクトップアプリが開かないときの対処法](https://sakait-blog.web.app/posts/Notion/mac-troubleshooting-notion-desktop-redirect/)
+
+- [NFC Port Softwareのインストールが環境変数の設定で失敗する場合の対処法](https://sakait-blog.web.app/posts/etc/troubleshooting-install-nfc-port-software/)
