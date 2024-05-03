@@ -11,6 +11,7 @@ export default function Layout({children, title}) {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <title>{title}</title>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6576896721636022" crossorigin="anonymous"></script>
           <meta name="google-site-verification" content="g0Mvuu_M1JqGTuvUqHRnF-dS6eRa9QA6jbJCSsI6XAM" />
         </Head>
         <header className={styles.header}>
