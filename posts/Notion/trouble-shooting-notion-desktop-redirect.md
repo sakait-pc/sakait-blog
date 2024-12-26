@@ -59,6 +59,8 @@ rd /s %userprofile%\AppData\Roaming\Notion
 
 ### その他の記事
 
+- [Notion（ノーション）アプリの地味だけど便利な使い方5選](https://sakait-blog.web.app/posts/Notion/notion-useful-tips/)
+
 - [Windows10にWSLやWSL2をインストールする方法](https://sakait-blog.web.app/posts/WSL/how-to-install-wsl/)
 
 - [初心者向けにNode.jsとは何か説明してみる](https://sakait-blog.web.app/posts/NodeJS/introduction-nodejs/)
