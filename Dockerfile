@@ -1,3 +1,3 @@
-FROM node:18
+FROM node:20
 
- RUN npm install -g -E firebase-tools@13.4.1
+ RUN npm install -g -E firebase-tools@14.3.1
