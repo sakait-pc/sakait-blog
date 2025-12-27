@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const siteTitle = 'sakait-blog';
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="google-site-verification" content="g0Mvuu_M1JqGTuvUqHRnF-dS6eRa9QA6jbJCSsI6XAM" />
+    <title>{title}</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6576896721636022" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div><a href="/">{siteTitle}</a></div>
+      </header>
+      <div class="contents">
+        <main class="main">
+          <slot />
+        </main>
+      </div>
+      <footer class="footer">
+        ©2021-{currentYear} <a href="https://github.com/sakait-pc" target="_blank" rel="noopener noreferrer">{siteTitle}</a>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  .container {
+    position: relative;
+  }
+
+  .contents {
+    max-width: 36rem;
+    padding: 0 1rem;
+    margin: 0 auto 3rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .main {
+    padding: 3rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer {
+    text-align: center;
+  }
+</style>

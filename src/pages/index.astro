@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const siteTitle = 'sakait-blog';
+
+// 全記事を取得して日付順にソート
+const allPosts = await getCollection('posts');
+const sortedPosts = allPosts.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<Layout title={siteTitle}>
+  <h1 class="description">
+    記事一覧
+  </h1>
+  <ul>
+    {sortedPosts.map((post) => (
+      <li class="list">
+        <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+        <div>
+          <small>{post.data.date}</small>
+        </div>
+      </li>
+    ))}
+  </ul>
+</Layout>
+
+<style>
+  .description {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+
+  .list {
+    margin-bottom: 1rem;
+  }
+</style>
