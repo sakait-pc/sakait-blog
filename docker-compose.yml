@@ -5,7 +5,7 @@ services:
     build: .
     working_dir: /home/app
     ports:
-      - "3000:3000"
+      - "4321:4321"
       - "9005:9005"
     volumes:
       - .:/home/app

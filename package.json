@@ -1,11 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export && next-sitemap --config sitemap.config.js",
-    "start": "next start"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "next:dev": "next dev",
+    "next:build": "next build && next export && next-sitemap --config sitemap.config.js"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.16.6",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
     "react": "18.1.0",
