@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
@@ -10,11 +11,15 @@ export async function getStaticPaths() {
   }));
 }
 
+type Props = {
+  post: CollectionEntry<'posts'>;
+};
+
 const { post } = Astro.props;
 const { Content } = await post.render();
 
 // GitHub履歴URL
-const historyUrl = `https://github.com/sakait-pc/sakait-blog/commits/main/src/content/posts/${post.slug}.md`;
+const historyUrl = `https://github.com/sakait-pc/sakait-blog/commits/main/src/content/posts/${post.id}`;
 ---
 
 <Layout title={post.data.title}>
