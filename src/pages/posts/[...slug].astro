@@ -5,10 +5,13 @@ import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
+  return posts.map((post) => {
+    const urlPath = post.id.replace(/\.(md|mdx)$/, '');
+    return {
+      params: { slug: urlPath },
+      props: { post },
+    };
+  });
 }
 
 type Props = {
@@ -18,6 +21,8 @@ type Props = {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
+const urlPath = post.id.replace(/\.(md|mdx)$/, '');
+
 // GitHub履歴URL
 const historyUrl = `https://github.com/sakait-pc/sakait-blog/commits/main/src/content/posts/${post.id}`;
 ---
@@ -26,7 +31,7 @@ const historyUrl = `https://github.com/sakait-pc/sakait-blog/commits/main/src/co
   <article>
     <header>
       <h1 class="entry-title">
-        <a href={`/posts/${post.slug}/`} class="entry-title-link">{post.data.title}</a>
+        <a href={`/posts/${urlPath}/`} class="entry-title-link">{post.data.title}</a>
       </h1>
       <div>
         <div><small>Date: {post.data.date}</small></div>
