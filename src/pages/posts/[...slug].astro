@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+type Props = {
+  post: CollectionEntry<'posts'>;
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// GitHub履歴URL
+const historyUrl = `https://github.com/sakait-pc/sakait-blog/commits/main/src/content/posts/${post.id}`;
+---
+
+<Layout title={post.data.title}>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href={`/posts/${post.slug}/`} class="entry-title-link">{post.data.title}</a>
+      </h1>
+      <div>
+        <div><small>Date: {post.data.date}</small></div>
+        <div><small><a href={historyUrl} target="_blank" rel="noopener noreferrer">History</a></small></div>
+      </div>
+    </header>
+    <div class="entry-body">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .entry-title {
+    font-size: 1.8em;
+  }
+
+  .entry-title-link {
+    color: #000;
+  }
+
+  .entry-body {
+    padding-top: 1.5rem;
+  }
+
+  .entry-body :global(img) {
+    max-width: 100%;
+  }
+</style>
